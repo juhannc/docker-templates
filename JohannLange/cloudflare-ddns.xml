@@ -33,7 +33,7 @@
       <Value>sub.domain.com</Value>
     </Variable>
 		<Variable>
-      <Name>CCF_ZONE_ID</Name>
+      <Name>CF_ZONE_ID</Name>
       <Value>a1b2c3d4e5</Value>
     </Variable>
 	<Variable>
