@@ -10,7 +10,7 @@
   <Support></Support>
   <Registry>https://hub.docker.com/r/johannlange/cloudflare-ddns/</Registry>
   <GitHub>https://github.com/JohannLange/cloudflare-ddns</GitHub>
-  <Repository>JohannLange/cloudflare-ddns/cloudflare-ddns</Repository>
+  <Repository>johannlange/cloudflare-ddns</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
