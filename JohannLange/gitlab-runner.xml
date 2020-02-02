@@ -1,1 +1,80 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<Containers>
+  <Name>GitLab Runner</Name>
+  <Description>Docker to run GitLab Runner in a Docker.
+    [br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    Click [b]"Advanced View"[/b] in the upper right corner.[br]
+	Scroll down and change the [b]Environment Variables[/b] to match your GitLab details.</Description>
+  <Support />
+  <Registry>https://hub.docker.com/r/johannlange/gitlab-runner/</Registry>
+  <GitHub>https://github.com/JohannLange/gitlab-runner</GitHub>
+  <Repository>johannlange/gitlab-runner</Repository>
+  <BindTime>true</BindTime>
+  <Data>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab-runner</HostDir>
+      <ContainerDir>/srv/gitlab-runner/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>URL</Name>
+      <Value>gitlab.example.org</Value>
+    </Variable>
+    <Variable>
+      <Name>TOKEN</Name>
+      <Value />
+    </Variable>
+    <Variable>
+      <Name>DOCKER_IMAGE</Name>
+      <Value>alpine:latest</Value>
+    </Variable>
+    <Variable>
+      <Name>DESCRIPTION</Name>
+      <Value>docker-runner</Value>
+    </Variable>
+    <Variable>
+      <Name>TAGS</Name>
+      <Value />
+    </Variable>
+    <Variable>
+      <Name>RUN_UNTAGGED</Name>
+      <Value>true</Value>
+    </Variable>
+    <Variable>
+      <Name>LOCKED</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>ACCESS_LEVEL</Name>
+      <Value>not_protected</Value>
+    </Variable>
+  </Environment>
+  <Config Name="URL" Target="URL" Default="gitlab.example.org" Mode="" Description="Your GitLab url" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="Token of your GitLab instance/group/project" Display="always" Required="true" Mask="false" />
+  <Config Name="Default Docker Image" Target="DOCKER_IMAGE" Default="alpine:latest" Mode="" Description="Default base image" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Description" Target="DESCRIPTION" Default="docker-runner" Mode="" Description="Name of your GitLab runner" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Tags" Target="TAGS" Default="" Mode="" Description="Runner tags" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Run untagged" Target="RUN_UNTAGGED" Default="true" Mode="" Description="true/false" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Locked" Target="LOCKED" Default="false" Mode="" Description="true/false" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Access protection level" Target="ACCESS_LEVEL" Default="not_protected" Mode="" Description="Access protection level" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="AppData Config Path" Target="/srv/gitlab-runner/config" Default="/mnt/user/appdata/gitlab-runner" Mode="rw" Description="Container Path: /srv/gitlab-runner/config" Type="Path" Display="always" Required="true" Mask="false" />
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false" />
+  <Banner>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Banner>
+  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Icon>
+  <Beta>False</Beta>
+  <Category>Tools:Utilities</Category>
+  <Changes />
+  <Date>2020-02-02</Date>
+</Containers>
