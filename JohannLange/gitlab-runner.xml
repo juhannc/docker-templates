@@ -37,7 +37,7 @@
       <Name>TOKEN</Name>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>alpine:latest</Value>
       <Name>DOCKER_IMAGE</Name>
     </Variable>
     <Variable>
