@@ -11,56 +11,12 @@
   <GitHub>https://github.com/JohannLange/gitlab-runner</GitHub>
   <Repository>johannlange/gitlab-runner</Repository>
   <BindTime>true</BindTime>
-  <Data>
-    <Volume>
-      <HostDir>/var/run/docker.sock</HostDir>
-      <ContainerDir>/var/run/docker.sock</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/gitlab-runner</HostDir>
-      <ContainerDir>/srv/gitlab-runner/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
+  <Data />
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>URL</Name>
-      <Value>gitlab.example.org</Value>
-    </Variable>
-    <Variable>
-      <Name>TOKEN</Name>
-      <Value />
-    </Variable>
-    <Variable>
-      <Name>DOCKER_IMAGE</Name>
-      <Value>alpine:latest</Value>
-    </Variable>
-    <Variable>
-      <Name>DESCRIPTION</Name>
-      <Value>docker-runner</Value>
-    </Variable>
-    <Variable>
-      <Name>TAGS</Name>
-      <Value />
-    </Variable>
-    <Variable>
-      <Name>RUN_UNTAGGED</Name>
-      <Value>true</Value>
-    </Variable>
-    <Variable>
-      <Name>LOCKED</Name>
-      <Value>false</Value>
-    </Variable>
-    <Variable>
-      <Name>ACCESS_LEVEL</Name>
-      <Value>not_protected</Value>
-    </Variable>
-  </Environment>
+  <Environment />
   <Config Name="URL" Target="URL" Default="gitlab.example.org" Mode="" Description="Your GitLab url" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="Token of your GitLab instance/group/project" Display="always" Required="true" Mask="false" />
   <Config Name="Default Docker Image" Target="DOCKER_IMAGE" Default="alpine:latest" Mode="" Description="Default base image" Type="Variable" Display="always" Required="true" Mask="false" />
