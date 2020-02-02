@@ -14,7 +14,7 @@
   <Data>
   <Volume>
       <HostDir>/mnt/user/appdata/gitlab-runner</HostDir>
-      <ContainerDir>/srv/gitlab-runner/config</ContainerDir>
+      <ContainerDir>/etc/gitlab-runner</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
