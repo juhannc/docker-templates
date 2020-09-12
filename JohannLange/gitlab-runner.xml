@@ -3,7 +3,7 @@
   <TemplateURL>https://raw.githubusercontent.com/JohannLange/docker-templates/master/JohannLange/gitlab-runner.xml</TemplateURL>
   <Name>GitLab Runner</Name>
   <Date>2020-09-12</Date>
-  <Repository>JohannLange/gitlab-runner</Repository>
+  <Repository>johannlange/gitlab-runner</Repository>
   <Registry>https://hub.docker.com/r/johannlange/gitlab-runner</Registry>
   <Network>bridge</Network>
   <Privileged>true</Privileged>
