@@ -77,4 +77,4 @@
   <Config Name="Access protection level" Target="ACCESS_LEVEL" Default="not_protected" Mode="" Description="Access protection level" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="AppData Config Path" Target="/etc/gitlab-runner" Default="/mnt/user/appdata/gitlab-runner" Mode="rw" Description="Container Path: /srv/gitlab-runner/config" Type="Path" Display="always" Required="true" Mask="false" />
   <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false" />
-  </Containers>
+  </Container>
