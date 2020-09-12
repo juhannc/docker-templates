@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Containers>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/JohannLange/docker-templates/master/JohannLange/gitlab-runner.xml</TemplateURL>
   <Name>GitLab Runner</Name>
+  <Date>2020-09-12</Date>
+  <Repository>gitlab/gitlab-runner</Repository>
+  <Registry>https://hub.docker.com/r/gitlab/gitlab-runner</Registry>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Project>https://docs.gitlab.com/runner/</Project>
+  <Support />
+  <Overview>This container sets up an GitLab Runner.</Overview>
   <Description>Docker to run GitLab Runner in a Docker.
     [br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     Click [b]"Advanced View"[/b] in the upper right corner.[br]
 	Scroll down and change the [b]Environment Variables[/b] to match your GitLab details.</Description>
-  <Support />
-  <Registry>https://hub.docker.com/r/johannlange/gitlab-runner/</Registry>
-  <GitHub>https://github.com/JohannLange/gitlab-runner</GitHub>
-  <Repository>johannlange/gitlab-runner</Repository>
-  <BindTime>true</BindTime>
+  <Category>Tools:Utilities</Category>
+  <WebUI />
+  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
   <Data>
-  <Volume>
-      <HostDir>/mnt/user/appdata/gitlab-runner</HostDir>
+    <Volume>
+      <HostDir></HostDir>
       <ContainerDir>/etc/gitlab-runner</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -23,10 +33,6 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Privileged>false</Privileged>
-  <Networking>
-    <Mode>bridge</Mode>
-  </Networking>
   <Environment>
     <Variable>
       <Value></Value>
@@ -61,7 +67,7 @@
       <Name>ACCESS_LEVEL</Name>
     </Variable>
   </Environment>
-  <!-- <Config Name="URL" Target="URL" Default="https://gitlab.example.org" Mode="" Description="Your GitLab url" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="URL" Target="URL" Default="https://gitlab.example.org" Mode="" Description="Your GitLab url" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="Token of your GitLab instance/group/project" Display="always" Required="true" Mask="false" />
   <Config Name="Default Docker Image" Target="DOCKER_IMAGE" Default="alpine:latest" Mode="" Description="Default base image" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="Description" Target="DESCRIPTION" Default="docker-runner" Mode="" Description="Name of your GitLab runner" Type="Variable" Display="always" Required="true" Mask="false" />
@@ -70,11 +76,5 @@
   <Config Name="Locked" Target="LOCKED" Default="false" Mode="" Description="true/false" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="Access protection level" Target="ACCESS_LEVEL" Default="not_protected" Mode="" Description="Access protection level" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="AppData Config Path" Target="/etc/gitlab-runner" Default="/mnt/user/appdata/gitlab-runner" Mode="rw" Description="Container Path: /srv/gitlab-runner/config" Type="Path" Display="always" Required="true" Mask="false" />
-  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false" /> -->
-  <Banner>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Banner>
-  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Icon>
-  <Beta>False</Beta>
-  <Category>Tools:Utilities</Category>
-  <Changes />
-  <Date>2020-02-02</Date>
-</Containers>
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false" />
+  </Containers>
